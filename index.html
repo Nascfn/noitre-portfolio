@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noitre, a modern pizzeria. Dinner starts at five.</title>
+  <meta name="description" content="Noitre is a modern pizzeria at 123 Example Street, open Tuesday to Sunday from 5 PM to 10 PM. Order online or reserve a table.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Archivo:wght@400;500&family=Archivo+Narrow:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="container masthead__in">
+      <nav class="masthead__links" aria-label="Sections">
+        <a href="#menu">Menu</a>
+        <a class="masthead__reserve" href="#reserve">Reserve</a>
+      </nav>
+      <a class="wordmark" href="#top" aria-label="Noitre, back to the top">Noitre</a>
+      <a class="btn btn--small masthead__order" href="#order">Order<span class="masthead__more">&nbsp;online</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-head">
+      <div class="hero__sky">
+        <div class="hero__dusk" aria-hidden="true"></div>
+        <div class="container hero__field">
+          <div class="sun">
+            <figure class="sun__disc" data-slot="hero" data-alt="A whole pizza seen from directly above, cut out along its crust on a transparent ground.">
+              <img src="images/hero-pizza.webp" width="1200" height="1200" alt="A whole pizza seen from above" fetchpriority="high">
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="container hero__head">
+        <h1 id="hero-head">Dinner<br class="br-d"> starts<br>at five.</h1>
+      </div>
+      <div class="hero__ground">
+        <div class="container hero__base">
+          <p class="lead">A modern pizzeria at 123 Example Street, open Tuesday to Sunday.</p>
+          <div class="actions">
+            <a class="btn" href="#order">Order online</a>
+            <a class="link-action" href="#reserve">Reserve a table</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bleed" aria-label="The oven">
+      <figure class="bleed__photo photo" data-slot="oven" data-alt="The pizza oven at service, a pizza going in on a peel.">
+        <img src="images/oven.webp" width="2000" height="833" alt="The pizza oven during service" loading="lazy">
+      </figure>
+    </section>
+
+    <section class="menu" id="menu" aria-labelledby="menu-head">
+      <div class="container">
+        <div class="menu__head">
+          <h2 id="menu-head">Eight pizzas, from five o’clock.</h2>
+        </div>
+        <form class="menu__body" id="order" data-endpoint="" data-form="order" novalidate>
+          <div class="menu__rows">
+            <ul class="menu__list">
+              <li>
+                <div class="menu__dish"><h3 id="d-margherita">Margherita</h3><p>Tomato, fior di latte, basil, olive oil</p></div>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer Margherita" disabled>&minus;</button>
+                  <input class="stepper__n" name="margherita" type="number" min="0" max="12" value="0" inputmode="numeric" aria-labelledby="d-margherita">
+                  <button class="stepper__btn" type="button" data-step="1" aria-label="One more Margherita">+</button>
+                </div>
+              </li>
+              <li>
+                <div class="menu__dish"><h3 id="d-marinara">Marinara</h3><p>Tomato, garlic, oregano, olive oil</p></div>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer Marinara" disabled>&minus;</button>
+                  <input class="stepper__n" name="marinara" type="number" min="0" max="12" value="0" inputmode="numeric" aria-labelledby="d-marinara">
+                  <button class="stepper__btn" type="button" data-step="1" aria-label="One more Marinara">+</button>
+                </div>
+              </li>
+              <li>
+                <div class="menu__dish"><h3 id="d-diavola">Diavola</h3><p>Tomato, fior di latte, spicy salami, chilli honey</p></div>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer Diavola" disabled>&minus;</button>
+                  <input class="stepper__n" name="diavola" type="number" min="0" max="12" value="0" inputmode="numeric" aria-labelledby="d-diavola">
+                  <button class="stepper__btn" type="button" data-step="1" aria-label="One more Diavola">+</button>
+                </div>
+              </li>
+              <li>
+                <div class="menu__dish"><h3 id="d-funghi">Funghi</h3><p>Roasted mushrooms, taleggio, thyme</p></div>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer Funghi" disabled>&minus;</button>
+                  <input class="stepper__n" name="funghi" type="number" min="0" max="12" value="0" inputmode="numeric" aria-labelledby="d-funghi">
+                  <button class="stepper__btn" type="button" data-step="1" aria-label="One more Funghi">+</button>
+                </div>
+              </li>
+              <li>
+                <div class="menu__dish"><h3 id="d-quattro-formaggi">Quattro formaggi</h3><p>Fior di latte, gorgonzola, fontina, parmesan</p></div>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer Quattro formaggi" disabled>&minus;</button>
+                  <input class="stepper__n" name="quattro-formaggi" type="number" min="0" max="12" value="0" inputmode="numeric" aria-labelledby="d-quattro-formaggi">
+                  <button class="stepper__btn" type="button" data-step="1" aria-label="One more Quattro formaggi">+</button>
+                </div>
+              </li>
+              <li>
+                <div class="menu__dish"><h3 id="d-salsiccia">Salsiccia</h3><p>Fennel sausage, roasted peppers, provolone</p></div>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer Salsiccia" disabled>&minus;</button>
+                  <input class="stepper__n" name="salsiccia" type="number" min="0" max="12" value="0" inputmode="numeric" aria-labelledby="d-salsiccia">
+                  <button class="stepper__btn" type="button" data-step="1" aria-label="One more Salsiccia">+</button>
+                </div>
+              </li>
+              <li>
+                <div class="menu__dish"><h3 id="d-napoli">Napoli</h3><p>Tomato, anchovies, capers, black olives</p></div>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer Napoli" disabled>&minus;</button>
+                  <input class="stepper__n" name="napoli" type="number" min="0" max="12" value="0" inputmode="numeric" aria-labelledby="d-napoli">
+                  <button class="stepper__btn" type="button" data-step="1" aria-label="One more Napoli">+</button>
+                </div>
+              </li>
+              <li>
+                <div class="menu__dish"><h3 id="d-bianca">Bianca</h3><p>Ricotta, fior di latte, garlic, lemon zest</p></div>
+                <div class="stepper">
+                  <button class="stepper__btn" type="button" data-step="-1" aria-label="One fewer Bianca" disabled>&minus;</button>
+                  <input class="stepper__n" name="bianca" type="number" min="0" max="12" value="0" inputmode="numeric" aria-labelledby="d-bianca">
+                  <button class="stepper__btn" type="button" data-step="1" aria-label="One more Bianca">+</button>
+                </div>
+              </li>
+            </ul>
+            <p class="small menu__note">A sample menu for this demo, set without prices.</p>
+          </div>
+          <div class="menu__photos">
+            <figure class="photo photo--food photo--wide" data-slot="menu-slice" data-alt="A slice being lifted from a white pizza.">
+              <img src="images/menu-slice.webp" width="1056" height="704" alt="A slice lifted from a white pizza" loading="lazy">
+            </figure>
+            <div class="menu__pin">
+              <figure class="photo photo--food photo--tall" data-slot="menu-pizza" data-alt="A whole diavola pizza on a stone counter.">
+                <img src="images/menu-pizza.webp" width="1056" height="1320" alt="A diavola pizza on a stone counter" loading="lazy">
+              </figure>
+              <div class="well ticket">
+                <div class="ticket__row">
+                  <div class="field">
+                    <label for="pickup">Pick-up time</label>
+                    <select id="pickup" name="pickup"><option>5:00 PM</option><option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option><option>9:30 PM</option></select>
+                  </div>
+                  <button class="btn" type="submit" data-total>Send the order</button>
+                </div>
+                <p class="small note"><strong id="order-help" data-help aria-live="polite"></strong> Online ordering is not connected in this demo. To order, call <a href="tel:+15555550100">(555)&nbsp;555-0100</a>.</p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="about" aria-labelledby="about-head">
+      <div class="container about__in">
+        <figure class="photo photo--tall" data-slot="dough" data-alt="Hands stretching pizza dough on a floured counter, no face in frame.">
+          <img src="images/dough.webp" width="1056" height="1320" alt="Hands stretching pizza dough on a floured counter" loading="lazy">
+        </figure>
+        <div class="about__text">
+          <h2 id="about-head">The dough is ready by five.</h2>
+          <p class="lead">Every pizza starts as a ball of dough, stretched by hand and baked when you order it.</p>
+          <p>The owner is Brazilian, and the pizza draws on Italian tradition.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="night" id="reserve" aria-labelledby="reserve-head">
+      <div class="container">
+        <h2 class="night__head" id="reserve-head">A table, any night but Monday.</h2>
+        <div class="night__body">
+          <figure class="photo night__photo" data-slot="room" data-alt="A table for two by the window at dusk, a quiet street outside.">
+            <img src="images/room.webp" width="1056" height="1320" alt="A table for two by the window at dusk" loading="lazy">
+          </figure>
+          <div class="night__side">
+            <form class="well booking" data-endpoint="" data-form="reserve" novalidate>
+              <p class="lead">Pick the day, the party and the hour.</p>
+              <div class="booking__row">
+                <div class="field field--day">
+                  <label for="day">Day</label>
+                  <input id="day" name="day" type="date" required>
+                </div>
+                <div class="field">
+                  <label for="party">Party</label>
+                  <select id="party" name="party"><option>1 person</option><option selected>2 people</option><option>3 people</option><option>4 people</option><option>5 people</option><option>6 people</option><option>7 people</option><option>8 people</option></select>
+                </div>
+                <div class="field">
+                  <label for="hour">Hour</label>
+                  <select id="hour" name="hour"><option>5:00 PM</option><option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option><option>9:30 PM</option></select>
+                </div>
+              </div>
+              <div class="booking__send">
+                <button class="btn" type="submit">Request the table</button>
+                <p class="small note"><strong id="reserve-help" data-help aria-live="polite"></strong> Table booking is not connected in this demo.</p>
+              </div>
+            </form>
+            <dl class="facts">
+              <div><dt>Open</dt><dd>Tuesday to Sunday, 5&nbsp;PM to 10&nbsp;PM</dd></div>
+              <div><dt>Address</dt><dd>123 Example Street</dd></div>
+              <div><dt>Telephone</dt><dd><a href="tel:+15555550100">(555)&nbsp;555-0100</a></dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="container">
+      <div class="colophon__in colophon__rule">
+      <p class="colophon__name">Noitre</p>
+      <div class="colophon__text">
+        <p>Noitre is a pizzeria at 123 Example Street, open Tuesday to Sunday from 5 PM to 10 PM. This is a demonstration site: the address, telephone number, hours and menu are placeholders, and nothing here places an order or books a table yet.</p>
+        <nav class="colophon__links" aria-label="Footer">
+          <a href="#menu">Menu</a>
+          <a href="#order">Order</a>
+          <a href="#reserve">Reserve</a>
+          <a href="tel:+15555550100">(555)&nbsp;555-0100</a>
+        </nav>
+      </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+  <script src="script.js" defer></script>
+</body>
+</html>
